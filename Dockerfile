@@ -13,7 +13,7 @@ COPY public ./public
 RUN bun run build:audience && bun run build:node
 
 # Run: plain Node. dist/server.js is self-contained, so no node_modules.
-FROM node:24-slim
+FROM node:26-slim
 ENV NODE_ENV=production \
     PORT=8787 \
     DATA_DIR=/data
